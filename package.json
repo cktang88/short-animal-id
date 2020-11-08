@@ -15,5 +15,9 @@
     "shortid"
   ],
   "author": "cktang88",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cktang88/short-animal-id.git"
+  },
   "license": "MIT"
 }

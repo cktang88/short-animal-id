@@ -1,11 +1,12 @@
 {
   "name": "short-animal-id",
   "version": "1.0.0",
-  "description": "Generates short animal ids",
+  "description": "Generates short ids with animal name prefixes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "keywords": ["short", "animal", "id", "uuid", "shortid"],
   "author": "cktang88",
   "license": "MIT"

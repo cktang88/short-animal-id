@@ -1,4 +1,4 @@
-import animalId, {numericId, alphaNumericId} from './index.js'
+let {animalId, numericId, alphaNumericId} = require('./index')
 for(let i=0; i<5; i++) {
     console.log(animalId())
 }

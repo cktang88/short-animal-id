@@ -225,4 +225,4 @@ const animals =[
   "Yak",
   "Zebra",
 ];
-export default animals
+module.exports=animals

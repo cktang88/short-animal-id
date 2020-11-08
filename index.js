@@ -1,10 +1,10 @@
+"use strict";
 // types generated via:
 // npx typescript ./index.js --declaration --allowJs --emitDeclarationOnly --outDir types
 
-import animals from "./animals.js";
+const animals = require('./animals')
 
 const pickRandom = arr => arr[Math.floor(Math.random() * arr.length)]
-
 function generateAlphaNumeric() {
   // maybe use https://www.npmjs.com/package/human-id for funny unit names?
   // or return shortid.generate().substring(0, 5);
@@ -14,11 +14,11 @@ function generateAlphaNumeric() {
 }
 
 
-export default function animalId() {
+function animalId() {
   return pickRandom(animals)
 }
 
-export function numericId(numDigits=1) {
+function numericId(numDigits=1) {
   let res= ''
   for(let i=0; i<numDigits; i++) {
     res += Math.floor(Math.random() * 10)
@@ -26,6 +26,7 @@ export function numericId(numDigits=1) {
   return res
 }
 
-export function alphaNumericId() {
+function alphaNumericId() {
   return generateAlphaNumeric()
 }
+module.exports = {animalId, numericId, alphaNumericId}

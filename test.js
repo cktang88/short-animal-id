@@ -1,14 +1,13 @@
-import getAnimalId from './index.js'
-
+import animalId, {numericId, alphaNumericId} from './index.js'
 for(let i=0; i<5; i++) {
-    console.log(getAnimalId())
+    console.log(animalId())
 }
 for(let i=0; i<5; i++) {
-    console.log(getAnimalId({digitSuffix: true}))
+    console.log(numericId(6))
 }
 for(let i=0; i<5; i++) {
-    console.log(getAnimalId({alphaNumericSuffix: true}))
+    console.log(alphaNumericId())
 }
 for(let i=0; i<5; i++) {
-    console.log(getAnimalId({digitSuffix: true, alphaNumericSuffix: true}))
+    console.log(`${animalId()}${numericId()}_${alphaNumericId()}`)
 }

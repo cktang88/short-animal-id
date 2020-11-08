@@ -4,18 +4,18 @@ Generates short ids with animal name prefixes. This strives for easily pronuncia
 
 **NOTE**: This package is not cryptographically random, nor are IDs guaranteed to be unique.
 
-### Options
+## Import
 
 ```js
-const defaultOpts = { digitSuffix: false, alphaNumericSuffix: false };
+import getAnimalId, { numericId, alphaNumericId } from "short-animal-id";
 ```
 
-### Examples
+## API
+
+### `animalId()`
 
 ```js
-import getAnimalId from 'short-animal-id'
-
-getAnimalId()
+animalId();
 /**
 Grouse
 Oryx
@@ -23,27 +23,43 @@ Raven
 Squid
 Dinosaur
 */
+```
 
+### `numericId(numDigits)`
 
-getAnimalId({digitSuffix: true})
+> params:
+> numDigits (1 by default)
+
+```js
+numericId(6);
 /**
-Turtle7
-Bee0
-Antelope8
-Hedgehog8
-Raccoon5
+734254
+408672
+211560
+044299
+714564
 */
+```
 
-getAnimalId({alphaNumericSuffix: true})
+### `alphaNumericId()`
+
+```js
+alphaNumericId();
 /**
-Salamander_fnels
-Flamingo_gbj1h
-Grasshopper_wh861
-Dog_6jpcx
-Bee_1jr8y
+tunuv
+p2i8m
+dm94t
+2zqh8
+jqc2b
 */
+```
 
-getAnimalId({digitSuffix: true, alphaNumericSuffix: true}))
+## Examples
+
+Example adding multiple ids together
+
+```js
+console.log(`${animalId()}${numericId()}_${alphaNumericId()}`);
 /**
 Cattle6_wkk9g
 Cockroach7_kazrp

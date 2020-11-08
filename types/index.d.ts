@@ -1,6 +1,3 @@
-// types generated via "npx typescript ./index.js --declaration --allowJs --emitDeclarationOnly --outDir types"
-
-export default function getAnimalId({ digitSuffix, alphaNumericSuffix }?: {
-    digitSuffix?: boolean;
-    alphaNumericSuffix?: boolean;
-}): string;
+export default function animalId(): string;
+export function numericId(numDigits?: number): string;
+export function alphaNumericId(): string;

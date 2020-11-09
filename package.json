@@ -1,6 +1,6 @@
 {
   "name": "short-animal-id",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Generates short ids with animal name prefixes",
   "main": "index.js",
   "types": "./types/index.d.ts",

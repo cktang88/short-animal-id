@@ -7,7 +7,7 @@ Generates short ids with animal name prefixes. This strives for easily pronuncia
 ## Import
 
 ```js
-import getAnimalId, { numericId, alphaNumericId } from "short-animal-id";
+import {animalId, numericId, alphaNumericId } from "short-animal-id";
 ```
 
 ## API

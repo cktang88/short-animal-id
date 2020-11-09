@@ -7,7 +7,8 @@ Generates short ids with animal name prefixes. This strives for easily pronuncia
 ## Import
 
 ```js
-import {animalId, numericId, alphaNumericId } from "short-animal-id";
+import idGenerators from "short-animal-id";
+let { animalId, numericId, alphanumericId } = idGenerators;
 ```
 
 ## API
@@ -25,10 +26,10 @@ Dinosaur
 */
 ```
 
-### `numericId(numDigits)`
+### `numericId(length)`
 
 > params:
-> numDigits (1 by default)
+> length (1 by default)
 
 ```js
 numericId(6);
@@ -41,16 +42,20 @@ numericId(6);
 */
 ```
 
-### `alphaNumericId()`
+### `alphanumericId(length, includeUppercase)`
+
+> params:
+> length (1 by default)
+> includeUppercase (false by default)
 
 ```js
-alphaNumericId();
+alphanumericId();
 /**
-tunuv
-p2i8m
-dm94t
-2zqh8
-jqc2b
+vh1o
+h361
+fbbh
+gm5i
+tc64
 */
 ```
 
@@ -59,12 +64,12 @@ jqc2b
 Example adding multiple ids together
 
 ```js
-console.log(`${animalId()}${numericId()}_${alphaNumericId()}`);
+console.log(`${animalId()}${numericId()}_${alphanumericId()}`);
 /**
-Cattle6_wkk9g
-Cockroach7_kazrp
-Goldfish1_t4rjc
-Oryx1_jztpm
-Partridge8_ev65i
+Crane0_P06H
+Sandpiper3_6Xzs
+Squid6_uPFL
+Turkey8_ndIG
+Pheasant4_Jdm6
 */
 ```

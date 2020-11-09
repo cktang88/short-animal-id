@@ -29,6 +29,7 @@ Dinosaur
 ### `numericId(length)`
 
 > params:
+
 > length (1 by default)
 
 ```js
@@ -45,11 +46,13 @@ numericId(6);
 ### `alphanumericId(length, includeUppercase)`
 
 > params:
+
 > length (1 by default)
+
 > includeUppercase (false by default)
 
 ```js
-alphanumericId();
+alphanumericId(4);
 /**
 vh1o
 h361
@@ -64,7 +67,7 @@ tc64
 Example adding multiple ids together
 
 ```js
-console.log(`${animalId()}${numericId()}_${alphanumericId()}`);
+console.log(`${animalId()}${numericId()}_${alphanumericId(4, true)}`);
 /**
 Crane0_P06H
 Sandpiper3_6Xzs
